@@ -24,8 +24,6 @@ def get_linked_list_sum(linked_list_1, linked_list_2):
             head = head.next
         return sum
     return_sum = sum_list(linked_list_1) + sum_list(linked_list_2)
-    print(sum_list(linked_list_1))
-    print(sum_list(linked_list_2))
     return return_sum
 
 
