@@ -1,20 +1,3 @@
-# prime_list = []
-# for n in range(2, 123456 * 2 + 1):
-#     for i in prime_list:
-#         if n % i == 0 and i * i <= n:
-#             break
-#     else:
-#         prime_list.append(n)
-# while 1:
-#     nums = int(input())
-#     if nums == 0:
-#         break
-#     else:
-#         counts = 0
-#         for i in range(nums + 1, 2 * nums + 1):
-#             if i in prime_list:
-#                 counts += 1
-#         print(counts)
 import math
 
 n = 123456 * 2 + 1
