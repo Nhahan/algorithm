@@ -1,6 +1,6 @@
 import random
 
-numbers = [1, 1, 1, 1, 1]
+numbers = [2, 1, 6, 3, 3]
 target_number = 3
 
 def get_count_of_ways_to_target_by_doing_plus_or_minus(array, target):
@@ -13,6 +13,7 @@ def get_count_of_ways_to_target_by_doing_plus_or_minus(array, target):
             ran_num.append(arr * random.choice(pm))
         cases.append(ran_num)
         cases = list(set([tuple(case) for case in cases]))
+        print(cases)
         if len(cases) == (2 ** len(array)):
             break
     answer = []

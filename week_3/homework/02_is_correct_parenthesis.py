@@ -24,12 +24,3 @@ def is_correct_parenthesis(string):
 
 
 print(is_correct_parenthesis(s))  # True 를 반환해야 합니다!
-print(is_correct_parenthesis("(((("))  # F
-print(is_correct_parenthesis("((())))("))  # F
-print(is_correct_parenthesis(")((((("))  # F
-print(is_correct_parenthesis(")()((((("))  # F
-print(is_correct_parenthesis(")()((((()))"))  # F
-print(is_correct_parenthesis("))(())(()()("))  # F
-print(is_correct_parenthesis("(()))(()"))  # F
-print(is_correct_parenthesis("(()))(()"))  # F
-print(is_correct_parenthesis("()()()()()()()()((()))(())(())()"))  # T
