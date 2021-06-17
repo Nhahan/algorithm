@@ -14,7 +14,7 @@ def is_exist_target_number_binary(target, numbers):
         elif target < avg:
             num_max = avg - 1
         else:
-            num_min = avg +1
+            num_min = avg + 1
         avg = (num_max + num_min) // 2
     return False
 
