@@ -15,13 +15,12 @@ def logic(x, y, n):
         else:
             return [1, 0]  # white, blue
     answer = [0, 0]  # white, blue
-    next_n = n // 2
-    left_upside = logic(x, y, next_n)
-    right_upside = logic(x + next_n, y, next_n)
-    left_downside = logic(x, y + next_n, next_n)
-    right_downside = logic(x + next_n, y + next_n, next_n)
-    white = left_upside[0] + right_upside[0] + left_downside[0] + right_downside[0]
-    blue = left_upside[1] + right_upside[1] + left_downside[1] + right_downside[1]
+    left_up = logic(x, y, n // 2)
+    right_up = logic(x + n // 2, y, n // 2)
+    left_down = logic(x, y + n // 2, n // 2)
+    right_down = logic(x + n // 2, y + n // 2, n // 2)
+    white = left_up[0] + right_up[0] + left_down[0] + right_down[0]
+    blue = left_up[1] + right_up[1] + left_down[1] + right_down[1]
 
     if white == 4 and blue == 0:
         answer[0] = 1
