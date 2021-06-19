@@ -1,16 +1,15 @@
-import sys
+N = int(input())
+stair = [int(input()) for _ in range(N)]
+dp = list()
+dp.append(stair[0])
+if len(stair) == 1:
+    print(dp[-1])
+elif len(stair) == 2:
+    print(dp[-1] + stair[-1])
+else:
+    dp.append(dp[0] + stair[1])
+    dp.append(max(dp[0] + stair[2], stair[1] + stair[2]))
 
-N = int(sys.stdin.readline())
-for _ in range(N):
-    x1, y1, r1, x2, y2, r2 = map(int, sys.stdin.readline().split())
-    distance = ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5
-    r_d = max(r2, r1) - min(r2, r1)
-    r_s = r1 + r2
-    if r_d < distance < r_s:
-        print(2)
-    elif (x1, y1, r1) == (x2, y2, r2):
-        print(-1)
-    elif r_d == distance or r_s == distance:
-        print(1)
-    elif r_s < distance or distance < r_d or distance == 0:
-        print(0)
+    for i in range(3, N):
+        dp.append(max(stair[i] + stair[i - 1] + dp[i - 3], stair[i] + dp[i - 2]))
+    print(dp[-1])
